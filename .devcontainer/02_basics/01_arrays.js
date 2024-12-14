@@ -46,3 +46,25 @@ console.log("Combined Array: ", combinedArr);
 // Example using map (optional, depending on your focus)
 const squaredArr = myArr.map(num => num * num);
 console.log("Squared Array: ", squaredArr);
+
+//////////////////////////////////
+const marvelHeros = ["Thor", "Ironman", "Spiderman"];
+const dcHeros = ["Superman", "Flash", "Batman"];
+
+// Merging arrays using the spread operator
+const allHeros = [...marvelHeros, ...dcHeros];
+console.log("All Heroes: ", allHeros);
+
+// Example of a nested array being flattened
+const mixedArray = [10, 20, [30, 40], 50, [60, [70, 80, [90]]]];
+const flattenedArray = mixedArray.flat(Infinity);
+console.log("Flattened Array: ", flattenedArray);
+
+// Checking if a value is an array
+console.log("Is 'Marvel' an Array? ", Array.isArray("Marvel"));
+console.log("Convert 'Marvel' to Array: ", Array.from("Marvel"));
+console.log("Array from Object (Edge Case): ", Array.from({ length: 3 }, (_, i) => i)); // New example
+
+// Creating an array from individual scores
+const scores = Array.of(110, 220, 330);
+console.log("Scores Array: ", scores);
